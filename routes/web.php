@@ -23,3 +23,6 @@ Route::get('/hello', function() {
         ->header('foo', 'bar');
 });
 
+Route::get('/posts/{id}', function($id) {
+    return response('Post ' . $id);
+})->where('id', '[0-9]+');
