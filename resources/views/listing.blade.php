@@ -52,5 +52,4 @@
             </div>
         </x-card>
     </div>
-
 @endsection
