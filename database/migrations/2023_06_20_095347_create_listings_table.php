@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); //If you delete a user, all records associated with this particular user are deleted.
             $table->string('title');
             $table->string('logo')->nullable();
             $table->string('tags');
